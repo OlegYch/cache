@@ -2970,7 +2970,7 @@ function extractTar(archivePath, targetDirectory) {
 exports.extractTar = extractTar;
 function createTar(archivePath, sourceDirectory) {
     return __awaiter(this, void 0, void 0, function* () {
-        const args = ["-cz", "-f", archivePath, "-C", sourceDirectory, "."];
+        const args = ["--posix", "-cz", "-f", archivePath, "-C", sourceDirectory, "."];
         yield execTar(args);
     });
 }

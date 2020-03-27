@@ -42,6 +42,6 @@ export async function createTar(
     archivePath: string,
     sourceDirectory: string
 ): Promise<void> {
-    const args = ["-cz", "-f", archivePath, "-C", sourceDirectory, "."];
+    const args = ["--posix", "-cz", "-f", archivePath, "-C", sourceDirectory, "."];
     await execTar(args);
 }

@@ -48,6 +48,7 @@ test("create tar", async () => {
         : "tar";
     expect(execMock).toHaveBeenCalledTimes(1);
     expect(execMock).toHaveBeenCalledWith(`"${tarPath}"`, [
+        "--posix",
         "-cz",
         "-f",
         archivePath,
